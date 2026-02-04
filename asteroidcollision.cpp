@@ -28,7 +28,7 @@ public:
         for(int a:asteroids)//iterate over asteroid
         {
             bool destroyed=false;//current element
-            //
+            //revesion me ye st.top>a kr diya tha ye 0 ho ga kuki stack me =ve honge tbi push
             while(!st.empty() && st.top()>0 && a<0)//iske andar hm tbhi laa rhe jb a negative ho aur +ve se compare kr le 
             {
               if(abs(st.top())<abs(a))//stack wala destroy ho gya kuki chota tha
@@ -44,7 +44,7 @@ public:
               break;//while loop tod dega aur next a pe jayega
             }
             //ye condition +ve aur negative dono ko push kra degi agar hoga aisa scene warna +ve ko hi krayegi
-            if(!destroyed)
+            if(!destroyed)//rev me ye bhul gya tha push krna
             {
                 st.push(a);
             }
@@ -55,7 +55,7 @@ public:
         //to hm piche se answer push kr denge vector me
         vector<int> ans(st.size());
 //hm ulta order nhi chahte hai seedha chahte hai isliye aisekr rhe hai
-        for(int i=st.size()-1;i>=0;i--)
+        for(int i=st.size()-1;i>=0;i--)//st.size()-1--ye krna hai ku 0 se indexing not st.size()
         {
             ans[i]=st.top();
             st.pop();

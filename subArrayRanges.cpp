@@ -28,14 +28,14 @@ public:
 // last me max se min minus kr do return kr do 
     long long subArrayRanges(vector<int>& nums) {
         int n = nums.size();
-        long long sumMax = 0, sumMin = 0;
+        long long sumMax = 0, sumMin = 0;//revisison--ise zero se initialise krna seekho
         //int ka long long 1LL
         {
             //ise rat lo aise hi 
             //[1,2,3]
             //stack-[]
             stack<int> st;
-            for (int i = 0; i <= n; i++) {
+            for (int i = 0; i <= n; i++) {//ye <= hoga tm equal bhul rhe ho dekh lena
                 //1-->i=0
                 //2--->i=1
                 //2--->stack-top->>[0]
@@ -62,7 +62,7 @@ public:
                     //3-->mid=1
                     //3-->nums[mid]--nums[1]--left->>1--right-->1
                     //3---->>sumMax=1*1*1=1
-                    sumMax += 1LL * nums[mid] * left * right;
+                    sumMax += 1LL * nums[mid] * left * right;//revision me ye 1LL hai jisme multiply ho rha hai ye miss kr rhe the
                 }
                 //1->stack me 0 push ho gya hai--stack[0]
                 // 2->>stack me 1 push hua

@@ -56,8 +56,13 @@ public:
 // newHead = 3
         
         //ye waali line dekh lena ku kr rhe h
-        head->next->next=head;
-        head->next=NULL;
+        head->next->next=head;//isko aise smjho do to
+        //  to base case me hai head->next->next me head 
+        //niche head->next me NULL daal do
+        head->next=NULL; //head->1->2->3->NULL ye hai ab kya hoga  
+        // NULL<-3<-head
+        //NULL<-2<-3<-head
+        //NULL<-1<-2<-3<-head
         return newHead;
     }
 

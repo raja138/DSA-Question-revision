@@ -16,15 +16,33 @@ class Solution {
 
 public:
     ListNode* reverseLinkedList(ListNode* head) {
+        //prev aur current isliye chahiye taaki
+        //Linked list ka link todte waqt list lost na ho,aur direction safely ulta ho jaaye — isliye.
+        //bhai hum bs yha link change kr rhe hai
+        //head->1->2->3->NULL
+        //NULL<-1<-2<-3<-head
+        //prev aur next isliye rkha hai
+        //taaki 
+        //Linked list ka link todte waqt list lost na ho,
+         //aur direction safely ulta ho jaaye — isliye.
         ListNode* prev = NULL;
         ListNode* curr = head;
+        
+        //while (curr != NULL)---linklist k upr iterate kro end tk
+        //head->1->2->3->NULL
+
+        //hum reverse me link change krte hai
+        //1---->>prev->NULL
+        //1----->>curr->head
         while (curr != NULL) {
-            ListNode* nextNode = curr->next;
-            curr->next = prev;
-            prev = curr;
-            curr = nextNode;
+            ListNode* temp = curr->next;//1-->>>ek temporary taaki next ka link mil ske//curr->next-->temp me 1 ka next yaani 2
+            curr->next = prev;//1---->>curr hai curr->next bn jayega prev jo ki null hai
+            prev = curr;//1--->>prev jo hai vo current ho jayega prev jo hai vo hai NULL hai ab prev ho 1 
+            curr = temp;//1-->>aur curr ho jayega 2
         }
         return prev;
+        //Reverse ke baad, jo last node thi wahi new head ban jaati hai.
+        //isliye previous return kr rhe hai
     }
     bool isPalindrome(ListNode* head) {
         //0 ya 1 node wali linked list hamesha palindrome hoti hai. neeche wala code is liye hai

@@ -76,7 +76,7 @@ public:
         ListNode* second = newHead;
 
 
-        while (second != NULL) {
+        while (second != NULL) {//second chota hota hai kuki half of ll se start hota hai
          //if (first->val != second->val)
          // Agar kahin bhi value mismatch:
          // palindrome nahi hai ❌

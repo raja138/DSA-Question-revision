@@ -1,4 +1,15 @@
-//Is question me tumhe ek string s di hoti hai, aur tumhe us string ke saare possible substrings (continuous parts) lene hote hain. Har substring ke liye tum beauty calculate karte ho, jiska matlab hai: us substring me jo character sabse zyada baar aaya ho uski frequency aur jo character sabse kam baar aaya ho (lekin at least ek baar) uski frequency ka difference. Fir tumhe sabhi substrings ki beauty ka total sum return karna hota hai. Single-character substrings ki beauty hamesha 0 hoti hai
+//Is question me tumhe ek string s di hoti
+//  hai, aur tumhe us string ke saare 
+// possible substrings (continuous parts) 
+// lene hote hain. Har substring ke liye tum 
+// beauty calculate karte ho, jiska matlab hai:
+//  us substring me jo character sabse zyada baar 
+// aaya ho uski frequency aur jo character sabse 
+// kam baar aaya ho (lekin at least ek baar) uski 
+// frequency ka difference. Fir tumhe sabhi substrings
+//  ki beauty ka total sum return karna hota hai.
+//  Single-character substrings ki beauty hamesha 
+// 0 hoti hai
 
 class Solution {
 public:
@@ -23,6 +34,12 @@ public:
 //s = "aabcb"
 
 //string pe iterate krte hai
+
+"abc" me:
+
+//i = 0 → "a", "ab", "abc"
+//i = 1 → "b", "bc"
+//i = 2 → "c"
         for(int i=0;i<n;i++){
             vector<int> freq(26,0);
 // vector isliye rkh rhe hai ki  
@@ -44,6 +61,10 @@ public:
 //mn → min frequency (non-zero wali)
 
 
+
+//to hr 
+// substring ki beauty nikalni hai aur store 
+// krna hai right
                 int mx=0,mn=INT_MAX;
                 for(int k=0;k<26;k++){
                     //Poora freq array scan kar rahe hain

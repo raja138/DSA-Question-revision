@@ -46,3 +46,10 @@ public:
         reverse(nums.begin() + idx + 1, nums.end());
     }
 };
+
+//We find the first index from the right
+//  where the sequence stops increasing. 
+// Then we swap it with the smallest
+//  element greater than it on the right side. 
+// Finally, we reverse the remaining suffix to 
+// obtain the next lexicographically smallest permutation.”

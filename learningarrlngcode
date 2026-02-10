@@ -1,2 +1,11 @@
 try solving code that are long at last
 revise shorter first
+
+
+
+map ka clarity
+mp.find(0) sirf check karta hai ki key 0 map me exist karti hai ya nahi
+2️⃣ mp.find(0) != mp.end() ⇒ 0 present hai, map change nahi hota
+3️⃣ mp[0] value access karta hai, aur agar 0 present nahi ho to naya entry bana deta hai
+4️⃣ Example: empty map pe mp[0] likhne se map ban jaata hai {0:0}
+5️⃣ Isliye check ke liye find() use karte hain, count update ke liye mp[key]

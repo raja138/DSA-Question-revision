@@ -6,6 +6,11 @@
 // Order matter nahi karta
 // [-1,0,1] same as [0,1,-1]
 // Duplicate triplets allowed nahi
+//Order different ho tab bhi allowed nahi hai
+// [-1, 0, 1]
+// [1, 0, -1]
+// 👉 Dono SAME triplet maane jaate hain
+// 👉 Allowed nahi (duplicate triplet)
 // Array unsorted ho sakta hai
 // Output me sirf unique triplets chahiye
 

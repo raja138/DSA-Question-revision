@@ -1,0 +1,49 @@
+DAILY TIME BLOCK (FIXED FOR ALL 30 DAYS)
+
+8:00 – 9:00 → Concept + patterns
+9:00 – 11:00 → Striver Sheet (Medium problems)
+11:00 – 12:00 → 🟨 BREAK (walk / food / no reels)
+12:00 – 1:30 → More problems / implementation
+1:30 – 2:15 → Revision (older topics)
+2:15 – 3:00 → Job apply + resume + JD reading
+
+📅 30-DAY EXACT CALENDAR
+🔁 WEEK 1 (Foundation + Confidence)
+
+Day 1 – Bit Manipulation
+Day 2 – Binary Search (array based)
+Day 3 – Recursion basics
+Day 4 – Sliding Window
+Day 5 – Two Pointer
+Day 6 – Greedy
+Day 7 – Revision + Apply Heavy Day
+
+🔁 WEEK 2 (Depth Increase)
+
+Day 8 – Bit Manipulation (XOR, subsets)
+Day 9 – Binary Search on Answer
+Day 10 – Recursion + Backtracking
+Day 11 – Sliding Window (variable window)
+Day 12 – Two Pointer (sorting based)
+Day 13 – Greedy (interval problems)
+Day 14 – Revision + Mock Interview (self)
+
+🔁 WEEK 3 (Heavy Interview Topics)
+
+Day 15 – Graph (BFS / DFS)
+Day 16 – Graph (cycle, components)
+Day 17 – DP (1D – intro)
+Day 18 – DP (2D – grid / subsequence)
+Day 19 – Tries (insert/search/XOR)
+Day 20 – Binary Search + Sliding Window mix
+Day 21 – Full Revision Day
+
+🔁 WEEK 4 (Interview Mode 🔥)
+
+Day 22 – DP (medium Striver problems)
+Day 23 – Graph (Topo / shortest idea)
+Day 24 – Greedy + Binary Search mix
+Day 25 – Sliding Window + Two Pointer mix
+Day 26 – Recursion → DP conversion
+Day 27 – Weakest Topic (based on mistakes)
+Day 28 – Mock Interview Day

@@ -9,7 +9,7 @@ public:
         int total=1<<n;//1 << n  =  2^n
 
         vector<vector<int>>ans;//kuki return time array of array or u can say vector of vector hai
-        for(int mask=0;mask<total;mask++)
+        for(int mask=0;mask<total;mask++)//kitne lene hai ek ya do ya 3 number of element
         {
             vector<int> subset;//array[] ya vector keh lo
             for(int i=0;i<n;i++)//hr element pe iterate krna hai

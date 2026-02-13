@@ -1,0 +1,60 @@
+Trie ek tree data structure hai
+jo strings ko prefix sharing ke through efficiently store karta hai
+aur har node represent karta hai ek character ko.
+(root)
+   |
+   c
+   |
+   a
+   |
+   t
+
+"cat" string ek variable me store nahi hai
+Root → c → a → t ka path hi us string ko represent karta hai  
+Trie me string character by character nodes ke through represent hoti hai
+
+search kaie krte hai tries me--
+ek ek char uthate hai aur agar search word ka
+ last char trie me endWith true hai to yes
+ Search Karne Ke 2 Conditions Hain
+1️⃣ Har character ka path exist karna chahiye
+Matlab:
+root → c → a → t
+Agar beech me koi character missing hai → return false.
+2️⃣ Last character wale node ka isEnd == true hona chahiye
+Ye confirm karta hai ki:
+✔ Word complete insert hua tha
+❌ Sirf prefix nahi hai
+
+
+Example Se Clear Karte Hain
+Insert kiya:
+"apple"
+Structure:
+a → p → p → l → e (isEnd = true)
+Case 1:
+Search("apple")
+Path exist? ✔
+Last node isEnd? ✔
+→ return true
+Case 2:
+Search("app")
+Path exist? ✔
+Last node isEnd? ❌
+→ return false
+Kyuki "app" word insert nahi hua tha
+Wo sirf prefix hai.
+
+
+//starts with 
+startsWith(prefix) Ka Exact Logic
+Step-by-step:
+1️⃣ Root se start karo
+2️⃣ Prefix ke har character ko ek-ek karke traverse karo
+3️⃣ Agar kisi bhi step pe:
+Required child pointer NULL mil gaya
+→ return false
+4️⃣ Agar prefix ka last character successfully traverse ho gaya
+→ return true
+
+Bas. isEnd check nahi karte.

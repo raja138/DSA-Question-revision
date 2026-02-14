@@ -68,7 +68,7 @@ public:
 // jo consecutive order ko break karta hai.
 // Isliye false return karte hain.
 
-                    if(pq.top()!=curr) return false;
+                    if(curr!=pq.top()) return false;
                     pq.pop();
                     freq.erase(curr);//map se bhi hta do
                 }
@@ -77,3 +77,10 @@ public:
         return true;
     }
 };
+
+//note--revision k liye 
+//jb code implement kr rha tha to ek question tha ki bhai ye curr to start + i 
+//to ye start kb pop ho rha to
+//bhai start jha se start ho rha hai vo 0 se start ho rha hai
+//to hmesha ek km rhega
+//apne aap pop ho jayega

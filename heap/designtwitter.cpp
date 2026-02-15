@@ -71,7 +71,32 @@ int timer=0;//assign timestamp to each tweet
 // so we can find latest tweets using heap
 
 unordered_map<int,vector<pair<int,int>>>tweets;
+//stores all tweets of each user
+// key   = userId
+// value = list of (timestamp, tweetId)
+// vector used because user can post multiple tweets
+// timestamp used to identify latest tweet
+// unordered_map used for O(1) access
+
+//unordered_map<
+//     int,                // userId
+//     vector<pair<int,int>> // list of (timestamp, tweetId)
+// >
+
+
+
 unordered_map<int,unordered_set<int>>followees;
+//stores list of users that a person follows
+//key   = followerId
+//value = set of followeeIds
+//unordered_set used to avoid duplicates
+//unordered_map used for O(1) access
+
+//followerId → set of users he follows
+
+
+
+
 public:
     Twitter() {
         
@@ -79,6 +104,8 @@ public:
     
     void postTweet(int userId, int tweetId) {
         tweets[userId].push_back({++timer,tweetId});
+
+        //User ke tweet ko timestamp ke sath store kar rahe hain taaki latest tweets identify kar sakein.
     }
     
     vector<int> getNewsFeed(int userId) {
@@ -109,6 +136,7 @@ public:
     }
     
     void follow(int followerId, int followeeId) {
+        //Follower ki follow list me followee ko add kar rahe hain.
         if(followerId!=followeeId)
         {
             followees[followerId].insert(followeeId);
@@ -117,6 +145,7 @@ public:
     }
     
     void unfollow(int followerId, int followeeId) {
+        //Follower ki follow list se followee ko remove kar rahe hain.
         followees[followerId].erase(followeeId);
     }
 };

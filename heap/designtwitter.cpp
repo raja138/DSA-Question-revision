@@ -108,31 +108,54 @@ public:
         //User ke tweet ko timestamp ke sath store kar rahe hain taaki latest tweets identify kar sakein.
     }
     
+     //Ye function latest 10 tweets return karta hai user + uske followees ke
     vector<int> getNewsFeed(int userId) {
-        vector<int>res;
-        followees[userId].insert(userId);
-        priority_queue<tuple<int,int,int>>pq;
-
-        for(int f:followees[userId])
+        vector<int>res;//final answer store karega (tweetIds)
+        followees[userId].insert(userId);//taaki uske khud ke tweets bhi news feed me aaye
+        priority_queue<tuple<int,int,int>>pq;//(timestamp, userId, tweetIndex)
+// Heap top = latest tweet.
+// Revision note:
+// max heap used to get latest tweet
+        for(int f:followees[userId])//Loop runs for:
+                                    //user + all followees
         {
-            if(!tweets[f].empty())
-            {
-                int idx=tweets[f].size()-1;
-                pq.push({tweets[f][idx].first,f,idx});
+            if(!tweets[f].empty()){//check agar tweets exist karte hain
+                int idx=tweets[f].size()-1;//latest tweet ka index
+//because latest tweet always last me hota hai.
+                pq.push({tweets[f][idx].first,f,idx});//push:
+                                                      //(timestamp, userId, index)
+
             }
         }
-        while(!pq.empty() && res.size()<10)
+        //Example heap:
+// (10,1,2)
+// (8,2,1)
+// (6,3,0)
+
+ 
+          //run until:heap empty OR 10 tweets mil jaye
+        while(!pq.empty() &&res.size()<10)//heap se latest tweets nikalna
         {
             auto[time,uid,idx]=pq.top();
             pq.pop();
-            res.push_back(tweets[uid][idx].second);
+            //(10,1,2)
+
+            res.push_back(tweets[uid][idx].second);//result me tweetId add kiya
+            //second = tweetId
 
             if(idx>0)
             {
+                //latest tweet index = 2
+                //next tweet index = 1
                 pq.push({tweets[uid][idx-1].first,uid,idx-1});
             }
+
         }
-        return res;
+        return res;//final answer return
+// contains:
+// latest 10 tweetIds
+        
+
     }
     
     void follow(int followerId, int followeeId) {

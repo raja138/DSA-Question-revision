@@ -40,3 +40,9 @@ return dp[0];
         
     }
 };
+
+//question jo mujhe aaye ki last row copy ku kiya??
+//answer---Last row copy ki kyunki last row se bottom tak ka 
+// minimum path sum already wahi element hota hai.
+
+//question --to hum isme niche se up

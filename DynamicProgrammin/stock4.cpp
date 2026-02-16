@@ -34,8 +34,13 @@ public:
             }
             return profit;
         }
-        vector<int> buy(k+1, INT_MIN);
+        vector<int> buy(k+1, INT_MIN);// maximum profit after t transactions AND holding stock
         vector<int> sell(k+1, 0);
+        //maximum profit after t transactions AND NOT holding stock
+       //buy[t] = max profit after buying stock in t-th transaction
+       //sell[t] = max profit after selling stock in t-th transaction
+
+
         for(int price : prices) {
             for(int t = k; t >= 1; t--) {  
                 sell[t] = max(sell[t], buy[t] + price);

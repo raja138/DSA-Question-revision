@@ -33,7 +33,7 @@ public:
             hold=max(hold,cash-prices[i]);
             //hold state me aane k do option hai
             //ya to hold ya to aaj buy kro
-            //tmare cash me se us din ka price minus
+            //tmare cash me se us din ka price minus ya stock khareed lo
         }
         //final answer cash return kro kuki stock hold
         //nhi karna chahte

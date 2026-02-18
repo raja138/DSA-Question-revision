@@ -113,3 +113,5 @@ public:
         return result;
     }
 };
+
+//isko likh lena lengthy hai to revise krte time likh lena

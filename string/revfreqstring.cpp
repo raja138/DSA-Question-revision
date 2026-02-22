@@ -71,6 +71,8 @@ public:
              return a.second>b.second;
         });
         string res="";
+        //yha na p.second char uthayega aur phr p.first se 
+        //uska count aur utni br char append kr dega
         for(auto &p:vec)
         {
             res.append(p.second,p.first);

@@ -105,3 +105,8 @@ public:
         return ans;
     }
 };
+
+
+//Complexity
+//Time: O(V + E) (har edge max 1 baar process)
+//Space: O(V + E) (reverse graph + arrays)

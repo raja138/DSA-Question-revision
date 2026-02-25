@@ -9,6 +9,8 @@
 //end word tk ek word ek node bna lo aur phr edge bna lo ek word se dusre word tk jaane k liye
 //aur bfs me nhi soch paaya tha ki shortest path bfs se nikal lo
 
+
+//unweighted graph me bfs hi shortest path deta
 class Solution {
 public:
     int ladderLength(string beginWord, string endWord, vector<string>& wordList) {

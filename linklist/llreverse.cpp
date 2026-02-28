@@ -12,30 +12,30 @@
 //ListNode* newHead = reverseList(head->next);
 
 // Chalo ise dry run se samjhte hain.
-// 🔎 Example lete hain:
+//  Example lete hain:
 // Linked List:
 // 1 → 2 → 3 → NULL
 // Hum call karte hain:
 // reverseList(1)
-// 🧠 Step-by-step Recursion Flow
-// 📌 Call 1:
+//  Step-by-step Recursion Flow
+//  Call 1:
 // reverseList(1)
 // Ye line execute hogi:
 // newHead = reverseList(2)
-// 📌 Call 2:
+//  Call 2:
 // reverseList(2)
 // Ye line execute hogi:
 // newHead = reverseList(3)
-// 📌 Call 3:
+//  Call 3:
 // reverseList(3)
 // Yaha base case hit hoga:
 // head->next == NULL
 // Return 3.
 // So:
 // newHead = 3
-// 🔁 Ab Stack Unwind Hota Hai
+//  Ab Stack Unwind Hota Hai
 // Ab recursion wapas upar aata hai.
-// 🔙 Back to Call 2 (head = 2)
+//  Back to Call 2 (head = 2)
 // Ab:
 // newHead = 3
 // Ab hum ye karte hain:
@@ -61,15 +61,15 @@
 // Phir:
 // 1->next = NULL
 // Return newHead (3)
-// 🎯 Final Answer
+//  Final Answer
 // 3 → 2 → 1
-// 💡 Important Samajhne Wali Baat
+//  Important Samajhne Wali Baat
 // Ye line:
 // ListNode* newHead = reverseList(head->next);
 // Ka matlab hai:
 // "Baaki poori list ko pehle reverse karo…
 // phir mujhe us reversed list ke end me jod dena."
-// 🧠 Mental Model
+//  Mental Model
 // Recursive version me:
 // Neeche tak jao
 // Last node ko new head banao

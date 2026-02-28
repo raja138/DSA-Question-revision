@@ -10,29 +10,17 @@ public:
 // Tumhe:
 // list modify nahi karni
 // extra memory (like hash set) use nahi karni
-    ListNode *detectCycle(ListNode *head) {
+     ListNode* middleNode(ListNode* head) {
+        ListNode* slow=head;
+        ListNode* fast=head;
 
-        ListNode* slow = head;
-        ListNode* fast = head;
 
-        while (fast != NULL && fast->next != NULL) {
-            slow = slow->next;
-            fast = fast->next->next;
-            //Cycle mile
-//slow = head
-//1 step dono
-//jahan milen wahi start
-
-            if (slow == fast) {   
-                slow = head;
-
-                while (slow != fast) {
-                    slow = slow->next;
-                    fast = fast->next;
-                }
-                return slow;     
-            }
+        while(fast!=nullptr && fast->next!=nullptr)
+        {
+            slow=slow->next;
+            fast=fast->next->next;
         }
-        return NULL;              
+
+        return slow;
     }
 };

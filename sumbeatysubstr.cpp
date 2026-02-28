@@ -85,3 +85,15 @@ public:
         return ans;
     }
 };
+
+
+vector<int>nums(n,-1);
+for(int num:nums)
+{
+    cout<<num;
+}
+
+for(auto num:nums)
+{
+    cout<<num;
+}

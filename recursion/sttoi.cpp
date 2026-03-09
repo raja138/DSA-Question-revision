@@ -1,3 +1,7 @@
+//pehle space phr sign phr 0
+
+
+
 class Solution {
 public:
        long long solve(string &s,int i,long long num,int sign)

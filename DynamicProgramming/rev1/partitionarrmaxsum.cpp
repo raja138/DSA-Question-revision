@@ -11,12 +11,17 @@
 class Solution {
 public:
     int maxSumAfterPartitioning(vector<int>& arr, int k) {
-        int n = arr.size();
-        vector<int> dp(n + 1, 0);
+        int n = arr.size();//loop pe iterate klrne k liye
+        vector<int> dp(n + 1, 0);//n+1 size ka vector 0 se initialise
+        //
 
-        for(int i = n - 1; i >= 0; i--) {
-            int maxi = 0;
-            int ans = 0;
+        for(int i = n - 1; i >= 0; i--) {//piche se easy hota hai
+            int maxi = 0;//particular hisse me max number yad rkhne k liye
+            int ans = 0;//sbse bda sum us hisse ka store krne k liye
+            //jb hum ek le dusra le ya teesra le
+
+
+            //
 
             for(int j = i; j < min(n, i + k); j++) {
                 maxi = max(maxi, arr[j]);
